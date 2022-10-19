@@ -18,25 +18,11 @@ public class Questao02 {
         double c = input.nextDouble();
 
         // Dizer qual o maior número
-        if (a > b && a > c) {
-            System.out.println("O primeiro número, " + a + ", é o maior entre os 3!");
-        }
-        if (b > a && b > c) {
-            System.out.println("O segundo número, " + b + ", é o maior entre os 3!");
-        }
-        if (c > a && c > b) {
-            System.out.println("O terceiro número, " + c + ", é o maior entre os 3!");
-        }
+        double maior = Math.max(Math.max(a,b),c);
+        System.out.println("O maior número entre os três é " + maior);
 
-        // Dizer qual o menor número
-        if (a < b && a < c) {
-            System.out.println("O primeiro número, " + a + ", é o menor entre os 3!");
-        }
-        if (b < a && b < c) {
-            System.out.println("O segundo número, " + b + ", é o menor entre os 3!");
-        }
-        if (c < a && c < b) {
-            System.out.println("O terceiro número, " + c + ", é o menor entre os 3!");
-        }
+        // Dizer qual o manor número
+        double menor = Math.min(Math.min(a,b),c);
+        System.out.println("O menor número entre os três é " + menor);
     }
 }
