@@ -27,20 +27,86 @@ public class Questao02 {
     }
 }
 
-// Dizer qual o maior número
-//        if (a > b && a > c) {
-//                System.out.println("O primeiro número, " + a + ", é o maior entre os 3!");
-//        } else if (b > a && b > c) {
-//                System.out.println("O segundo número, " + b + ", é o maior entre os 3!");
-//        } else {
-//                System.out.println("O terceiro número, " + c + ", é o maior entre os 3!");
-//        }
+class Questao02Variacao {
+    public static void main(String[] args) {
 
-// Dizer qual o menor número
-//        if (a < b && a < c) {
-//                System.out.println("O primeiro número, " + a + ", é o menor entre os 3!");
-//        } else if (b < a && b < c) {
-//                System.out.println("O segundo número, " + b + ", é o menor entre os 3!");
-//        } else {
-//                System.out.println("O terceiro número, " + c + ", é o menor entre os 3!");
-//        }
+        Scanner input = new Scanner (System.in);
+
+        System.out.println ("Seja bem-vindo!\n" +
+                "Aqui eu posso te mostrar a ordem de tamanho entre três números!");
+
+        System.out.print ("Por favor, insira o primeiro número: ");
+        double a = input.nextDouble();
+        System.out.print ("Por favor, insira o segundo número: ");
+        double b = input.nextDouble();
+        System.out.print ("Por favor, insira o terceiro número: ");
+        double c = input.nextDouble();
+
+        //Dizer qual o maior número
+        if (a == b && a == c) {
+            System.out.println("Os três números são iguais!");
+        } else if (a >= b && a >= c) {
+            System.out.println("O primeiro número, " + a + ", é o maior entre os 3!");
+        } else if (b >= a && b >= c) {
+            System.out.println("O segundo número, " + b + ", é o maior entre os 3!");
+        } else {
+            System.out.println("O terceiro número, " + c + ", é o maior entre os 3!");
+        }
+
+        //Dizer qual o menor número
+        if (a == b && a == c) {
+
+        }
+        if (a <= b && a <= c) {
+            System.out.println("O primeiro número, " + a + ", é o menor entre os 3!");
+        } else if (b <= a && b <= c) {
+            System.out.println("O segundo número, " + b + ", é o menor entre os 3!");
+        } else {
+            System.out.println("O terceiro número, " + c + ", é o menor entre os 3!");
+        }
+    }
+}
+
+class Questao02Plus {
+
+    public static void main(String[] args) {
+
+        Scanner input = new Scanner (System.in);
+
+        System.out.println ("Seja bem-vindo!\n" +
+                "Aqui eu posso te mostrar a ordem de tamanho entre três números!");
+
+        System.out.print ("Por favor, insira o primeiro número: ");
+        int a = input.nextInt();
+        System.out.print ("Por favor, insira o segundo número: ");
+        int b = input.nextInt();
+        System.out.print ("Por favor, insira o terceiro número: ");
+        int c = input.nextInt();
+
+        int maior = greater(greater(a,b),c);
+        int menor = smaller(smaller(a,b),c);
+
+        System.out.println("O maior número entre os três é " + maior);
+        System.out.println("O menor número entre os três é " + menor);
+
+    }
+
+    // exemplo para ser equivalente ao Math.max
+    public static int greater (int x, int y) {
+        if (x > y) {
+            return x;
+        } else {
+            return y;
+        }
+    }
+
+    // exemplo para ser equivalente ao Math.min
+    public static int smaller (int x, int y) {
+        if (x < y) {
+            return x;
+        } else {
+            return y;
+        }
+    }
+
+}
