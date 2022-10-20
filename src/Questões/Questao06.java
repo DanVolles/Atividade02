@@ -30,7 +30,7 @@ public class Questao06 {
         } else if (imc >= 35 && imc < 40) {
             System.out.println("O seu IMC é " + imc + " e está acima do esperado.\n" +
                     "Você está em situação de obesidade moderada.");
-        } else if (imc > 40) {
+        } else if (imc >= 40) {
             System.out.println("O seu IMC é " + imc + " e está acima do esperado.\n" +
                     "Você está em situação de obesidade mórbida.");
         }
