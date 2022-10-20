@@ -12,6 +12,8 @@ public class Questao01 {
         System.out.print("Por favor, digite o número: ");
         double n = input.nextDouble();
 
+        
+
         if (n > 0) {
             System.out.println("Esse número é maior que 0!");
         }
