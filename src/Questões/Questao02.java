@@ -83,30 +83,37 @@ class Questao02Plus {
         System.out.print ("Por favor, insira o terceiro número: ");
         int c = input.nextInt();
 
-        int maior = greater(greater(a,b),c);
-        int menor = smaller(smaller(a,b),c);
+        int maior = greater(a,b,c);
+        int menor = smaller(a,b,c);
 
         System.out.println("O maior número entre os três é " + maior);
         System.out.println("O menor número entre os três é " + menor);
 
     }
 
-    // exemplo para ser equivalente ao Math.max
-    public static int greater (int x, int y) {
-        if (x > y) {
-            return x;
-        } else {
-            return y;
-        }
+    public static int greater (int x, int y, int z) {
+        return Math.max(Math.max(x,y),z);
     }
 
-    // exemplo para ser equivalente ao Math.min
-    public static int smaller (int x, int y) {
-        if (x < y) {
-            return x;
-        } else {
-            return y;
-        }
+    public static int smaller (int x, int y, int z) {
+        return Math.min(Math.min(x,y),z);
     }
 
+//    // exemplo para ser equivalente ao Math.max(x,y)
+//    public static int greaterExample (int x, int y) {
+//        if (x > y) {
+//            return x;
+//        } else {
+//            return y;
+//        }
+//    }
+//
+//    // exemplo para ser equivalente ao Math.min(x,y)
+//    public static int smallerExample (int x, int y) {
+//        if (x < y) {
+//            return x;
+//        } else {
+//            return y;
+//        }
+//    }
 }
